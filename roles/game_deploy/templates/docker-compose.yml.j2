@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  game-2048:
+    image: chafikali250/2048-game:latest
+    container_name: devops_2048_game
+    ports:
+      - "{{ app_port }}:80"
+    restart: always

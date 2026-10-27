@@ -1,0 +1,5 @@
+- hosts: local
+  become: yes
+  tasks:
+    - name: Déploiement du jeu 2048 via Docker Hub
+      # ...

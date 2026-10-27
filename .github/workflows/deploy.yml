@@ -1,0 +1,18 @@
+name: CI/CD Pipeline - Local VMware Deployment
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # Utilise votre VM VMware locale
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Ansible Playbook locally
+        run: |
+          ansible-playbook -i inventory.ini playbook.yml
