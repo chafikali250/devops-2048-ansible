@@ -4,7 +4,7 @@
     - name: Déploiement du jeu 2048 via Docker Hub
       docker_container:
         name: game-2048
-        image: chafikali250/2048:latest  # Remplacez par votre image Docker Hub
+        image: chali250/2048:latest  # Remplacez par votre image Docker Hub
         state: started
         restart_policy: always
         published_ports:
