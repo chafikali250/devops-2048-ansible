@@ -1,10 +1,11 @@
- hosts: local
+---
+- hosts: localhost
   become: yes
   tasks:
     - name: Déploiement du jeu 2048 via Docker Hub
-      docker_container:
+      community.docker.docker_container:
         name: game-2048
-        image: chali250/2048:latest  # Remplacez par votre image Docker Hub
+        image: chali250/2048:latest
         state: started
         restart_policy: always
         published_ports:
